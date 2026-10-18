@@ -1,292 +1,491 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muneerah Ahmad Alahaideeb</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styless.css"> <!-- Link to 5your custom CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muneerah Alahaideeb | Red & Purple Team</title>
+  <meta name="description" content="Muneerah Ahmed Alahaideeb — cybersecurity specialist in Riyadh, growing into offensive security. Web and Android security labs, IoT/OT security, and RASED, 2nd place at the Riyadh Expo 2030 Challenge.">
+  <meta property="og:title" content="Muneerah Alahaideeb | Red & Purple Team">
+  <meta property="og:description" content="Hands-on web, Android and network security testing, SOC experience at Zain KSA, and RASED, 2nd place at the Riyadh Expo 2030 Challenge.">
+  <meta property="og:image" content="https://muneerah12.github.io/MuneerahAhmed/w.png">
+  <meta name="theme-color" content="#16233A">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316233A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23F5F6F8'%3EMA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // apply saved theme and language before paint
+    try {
+      const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t;
+      const l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('lang');
+      if (l === 'ar') { document.documentElement.lang = 'ar'; document.documentElement.dir = 'rtl'; }
+    } catch (e) {}
+  </script>
 </head>
 <body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="w.png" alt="Logo" height="40">
-                Muneerah Ahmad Alahaideeb
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#resume">Resume</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content Sections -->
-    <section id="about" class="py-5 bg-light">
-        <div class="container">
-            <h2>About Me</h2>
-           <p>I am an Information Systems Graduate and a Cybersecurity Specialist with a solid foundation in Enterprise Cloud Security, gained through hands-on experience during my COOP internship at Zain KSA.</p><p>Since graduating, I have dedicated my time to intensive self-driven upskilling, actively expanding my technical expertise in offensive security and cloud infrastructure.</p>
-       <P>Currently, I am expanding my practical depth by pursuing the eJPT (ElearnSecurity Junior Penetration Tester) and AWS Cloud certifications,
-         alongside actively conquering security labs on TryHackMe. I thrive on transforming complex cyber challenges into functional, 
-         secure solutions—a passion I am currently channeling into building Bank Shield, an advanced cybersecurity project integrated with behavioral analytics designed for technical hackathons.</P>
-        
-         <P>Armed with a blend of academic knowledge, corporate internship experience, and continuous hands-on laboratory training, 
-            I am fully prepared and eager to transition into a full-time cybersecurity role where I can safeguard critical digital assets and drive proactive defense.</P>
-        
-        </div>
-   
-    
-    <section id="experience" class="py-5">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Zain KSA</h3>
-                <h4>Cybersecurity Specialist Intern</h4>
-                <p><em>September 2024 – March 2025</em></p>
-                <ul>
-                    <li><strong>Elastic SIEM </strong>
-                        <ul>
-                            <li>Performing search.</li>
-                            <li>Generating reports.</li>
-                            <li>Managing SOC tickets.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Familiarity with NCA Frameworks:</strong>
-                        <ul>
-                            <li>Cloud Cybersecurity Controls (CCC).</li>   <li>Essential Cybersecurity Controls (ECC)</em>.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Auditing Experience:</strong> Served as a Champion for GRC auditing processes.</li>
-                    <li><strong>Alibaba Cloud Services:</strong>
-                        <ul>
-                            <li>Gained hands-on experience with <em>Infrastructure as a Service (IaaS)</em> and <em>Software as a Service (SaaS)</em> platforms.</li>
-                        </ul> </li> </ul></div> </div> </section>
-
-
-    <section id="education" class="py-5">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="row">
-                <div class="col-md-8">
-    <div class="education-card">
-                    <h3>Prince Sultan University</h3>
-                    <p>Bachelor of Science in Information Systems - Cybersecurity Track</p>
-                    <p>Graduation: 2025</p>
-                 <p>Relevant Courses:</p> <li>Penetration Testing and Ethical Hacking  </li><li>Cyber-Physical System Security.  </li>  
-</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<section id="projects" class="py-5 bg-light">
-    <div class="container">
-        <h2>Projects</h2>
-
-        <div class="row">
-
-            <div class="col-md-6 mb-4">
-                <div class="project bg-white p-4 h-100">
-                    <h3>Bank Shield: AI-Driven Pre-Login Fraud & SIM Swap Detection System</h3>
-                    <p>Develop a Pre-login feature that enhances banking infrastructure and Cryptocurrency platform security by analyzing user behavior and contextual risk signals before login, detecting potential ATO and triggering protective actions only when suspicious activity is identified.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 mb-4">
-                <div class="project bg-white p-4 h-100">
-                    <h3>Smart Cyber Physical Wick Hydroponic System</h3>
-                    <p>Engineered cyber-physical CPS for hydroponic cultivation using Arduino Uno, ESP8266, and Blynk platform for control.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 mb-4">
-                <div class="project bg-white p-4 h-100">
-                    <h3>Pre-Cloud Hotel</h3>
-                    <p>Developed a user-friendly hotel website with self-check-in functionality.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 mb-4">
-                <div class="project bg-white p-4 h-100">
-                    <h3>Google Chrome Security Assessment</h3>
-                    <p>Conducted a security analysis and applied secure software development practices.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 mb-4">
-                <div class="project bg-white p-4 h-100">
-                    <h3>Employment of Talented People</h3>
-                    <p>Designed a job platform based on System Analysis and Design principles for hiring and monitoring talented individuals.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 mb-4">
-                <div class="project bg-white p-4 h-100">
-                    <h3>Marketing and Features Demonstration</h3>
-                    <p>Restructured processes in a small organization using the TOGAF framework to improve marketing and service demonstration.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 mb-4">
-                <div class="project bg-white p-4 h-100">
-                    <h3>Automating Marketing in Technical Company</h3>
-                    <p>Applied BPM concepts to automate and enhance marketing emails for a technical company.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 mb-4">
-                <div class="project bg-white p-4 h-100">
-                    <h3>Smart Flock Tracking</h3>
-                    <p>Developed a database and prototype application to monitor animal data including birth information, weight, and medical records.</p>
-                </div>
-            </div>
-
-        </div>
+  <header class="topbar" id="top">
+    <div class="wrap topbar-inner">
+      <a class="mark" href="#top" aria-label="Muneerah Alahaideeb, back to top">MA</a>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="#work" data-i18n="nav.work">Work</a>
+        <a href="#experience" data-i18n="nav.exp">Experience</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#credentials" data-i18n="nav.creds">Credentials</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="topbar-actions">
+        <button class="icon-btn lang-btn" id="langToggle" type="button" aria-label="اقرأ الصفحة بالعربية" lang="ar">ع</button>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark theme">
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <a class="btn btn-small" href="Muneerah_Alahaideeb_Resume.pdf" target="_blank" rel="noopener" data-i18n="resume">Resume</a>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
     </div>
-</section>
+  </header>
 
-    <section id="skills" class="py-5">
-        <div class="container">
-            <h2>Skills</h2>
-            <h3>Technical Skills</h3>
-            <table border="1" cellspacing="0" cellpadding="8" width="100%">
-                <tr>
-                    <th>Category</th>
-                    <th>Details</th>
-                </tr>
-                <tr>
-                    <td><strong>Programming Languages</strong></td>
-                    <td>Basic proficiency in Java, JavaScript, C, C#, PHP, SQL, Python, and Kotlin.</td>
-                </tr>
-                <tr>
-                    <td><strong>Markup Languages</strong></td>
-                    <td>HTML and CSS for responsive, visually appealing web interfaces.</td>
-                </tr>
-                <tr>
-                    <td><strong>Operating Systems</strong></td>
-                    <td>Windows: 10, 11, Windows Server, and Leagcy Systems( 2000, XP). <br> Linux: Ubuntu, Debian, Kali Linux.</td>
-                </tr>
-                <tr>
-                    <td><strong>Networking</strong></td>
-                    <td>Wireshark, Nmap, Metasploit, Burp suite, Gobuster.</td>
-                </tr>
-                <tr>
-                    <td><strong>Tools</strong></td>
-                    <td>HXD, SQL Oracle DB, Windows Defender, ArchiMate, GitHub Git, Arduino IDE, Blynk, AWS Managment.</td>
-                </tr>
-        
-                    <td><strong>Hardware</strong></td>
-                    <td>ESP8266, Arduino Uno, STC/Huawei HG8245W5.</td>
-                </tr>  </table>
-                
-                <table border="1" cellspacing="0" cellpadding="8" width="100%"><tr>
-                <h3> <br>Frameworks</h3>
-                <tr>
-                    <td><strong>Business Process Managment & Enterprise Architecture Framework</strong></td>
-                    <td>TOGAF, DODAF, Zachman, Six Sigma </td></tr> 
-                   
-                    <tr><td><strong> Project Managment </strong></td>
-                        <td>Agile, Iterative, Waterfall</td></tr> 
-                    
-                    <tr><td><strong>Cybersecurity Framwork </strong></td>
-                        <td>NCA: CCC, ECC,DCC, ISO27001, Mitre Att&ck, NIST CSF.</td></tr> 
-                
-                </table>
-                <table border="1" cellspacing="0" cellpadding="8" width="100%"><tr>
-                    <h3> <br>Modeling Languages</h3>
-                    <tr>
-                        <td><strong>DATABASE MANAGEMENT AND APPLICATIONS</strong></td>
-                        <td>ERD, Mapping </td></tr> 
-                       
-                        <tr><td><strong> SYSTEM ANALYSIS AND DESIGN	</strong></td>
-                            <td>ERD, UML, DFD, Flowchart</td></tr> 
-                        
-                        <tr><td><strong>Business Process Managment & Enterprise Architecture Framework</strong></td>
-                            <td>BPMN, Archimate</td></tr> 
-                    </table>
-                
-
-
-                
-           
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker" data-i18n="hero.kicker">Riyadh, Saudi Arabia &nbsp;/&nbsp; open to red and purple team roles</p>
+          <h1 data-i18n="hero.name">Muneerah<br>Alahaideeb</h1>
+          <p class="hero-role" data-i18n="hero.role">Cybersecurity specialist growing into offensive security. I practise attacking web, Android and IoT targets in labs and CTFs, and my SOC background helps me show what defenders should have seen.</p>
+          <ul class="hero-facts">
+            <li data-i18n="hero.f1"><strong>CompTIA Security+</strong> certified</li>
+            <li data-i18n="hero.f2"><strong>2nd place</strong>, Riyadh Expo 2030 Challenge</li>
+            <li data-i18n="hero.f3"><strong>Qualified</strong> for the Black Hat MEA CTF, December 2026</li>
+            <li data-i18n="hero.f4"><strong>Zain KSA</strong> SOC and vulnerability management internship</li>
+          </ul>
+          <div class="hero-cta">
+            <a class="btn" href="#work" data-i18n="hero.cta1">See my work</a>
+            <a class="btn btn-ghost" href="Muneerah_Alahaideeb_Resume.pdf" download data-i18n="hero.cta2">Download resume (PDF)</a>
+          </div>
         </div>
+
+        <!-- Interactive request tamper demo -->
+        <figure class="lab" aria-labelledby="labTitle">
+          <div class="lab-head">
+            <span class="lab-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span id="labTitle" data-i18n="lab.title">Try it: an IDOR check, the way I test it</span>
+          </div>
+          <div class="lab-body">
+            <p class="lab-hint" id="labHint">This is an intercepted request for <em>your own</em> account. Change the account ID and send it.</p>
+<pre class="req" dir="ltr" aria-label="HTTP request"><span class="m">GET</span> /api/v1/accounts/<span class="idwrap"><button type="button" class="id-step" id="idDown" aria-label="Decrease account ID">−</button><output id="acctId" class="id-val">1043</output><button type="button" class="id-step" id="idUp" aria-label="Increase account ID">+</button></span> HTTP/1.1
+Host: bank.example
+Cookie: session=<span class="tok">u1043·8f2c…</span>
+Accept: application/json</pre>
+            <div class="lab-controls">
+              <button class="btn btn-small" id="sendReq" type="button" data-i18n="lab.send">Send request</button>
+              <button class="link-btn" id="resetReq" type="button" data-i18n="lab.reset">Reset</button>
+            </div>
+            <pre class="res" id="response" dir="ltr" aria-live="polite"><span class="muted">Response will appear here.</span></pre>
+            <p class="lab-verdict" id="verdict" hidden></p>
+          </div>
+          <figcaption data-i18n="lab.caption">A simulated example. No real systems are contacted.</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:AmuneerahA@gmail.com">AmuneerahA@gmail.com</a></p>
-            <p>Phone: <a href="tel:+966539007512">+966 551474957</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/muneerah-alahaideeb-b99896231/">MUNEERAH ALAHAIDEEB</a></p>
+    <!-- WHAT I BRING -->
+    <section class="pillars" aria-label="What I bring">
+      <div class="wrap pillars-grid">
+        <div class="pillar">
+          <span class="pillar-k" data-i18n="p1.k">Attack</span>
+          <p data-i18n="p1.p">Web, Android and network targets tested hands-on with Burp Suite, ADB, JADX and Nmap, and each finding written up with evidence, impact and a fix.</p>
         </div>
+        <div class="pillar">
+          <span class="pillar-k" data-i18n="p2.k">Detect</span>
+          <p data-i18n="p2.p">Real SOC work at Zain KSA: Elastic SIEM searches, SOC tickets, vulnerability assessments, and internal audits against NCA ECC and CCC.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-k" data-i18n="p3.k">Build</span>
+          <p data-i18n="p3.p">Built and secured the IoT layer of RASED, a team platform that won 2nd place at the Riyadh Expo 2030 Challenge.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="personal" class="py-5">
-        <div class="container">
-            <h2>Personal Development</h2>
-            <ul>
-               
-                <li> AWS Cloud Practitioner Essential (June 2026)</li>
-                <li> TryHackMe Jr Penetration Tester (May - present)</li>
-                <li> Tuwaiq Academy Cybercrime and Network Forensics (July 2025)</li>
-                <li> CompTIA Security+ (November 2024)</li>
-                <li>Linux Fundamentals (Coursera, 2024)</li>
-                <li>Google Support (Coursera, 2024)</li>
-                <li>Introduction to Cybersecurity (Doroob, 2024)</li>
-                <li>Ethics, Technology and Engineering (Coursera, 2024)</li>
-                <li>Introduction to Microsoft Excel (Coursera, 2024)</li>
-                <li>Agile Meets Design Thinking (Coursera, 2023)</li>
-                <li>Blockchain Development (PSU, 2023)</li>
-                <li>Android Apps Programming Camp (Code for Girls, 2022)</li>
-                <li>Cyber Security Tools & Cyber Attacks Courses (OSH. Academy British, 2022)</li>
-                <li>Cyber Security Risk Management (OSH. Academy British, 2022)</li>
-                <li>Introduction to Data Science for Beginners (PSU, 2021)</li>
-            </ul>
+    <!-- FEATURED: RASED -->
+    <section class="feature" aria-labelledby="rasedTitle">
+      <div class="wrap feature-grid">
+        <div class="award">
+          <span class="award-place" data-i18n="r.place">2<sup>nd</sup></span>
+          <span class="award-text" data-i18n="r.award">Riyadh Expo 2030 Challenge<br>October 2026</span>
         </div>
+        <div class="feature-copy">
+          <h2 id="rasedTitle" data-i18n="r.title">RASED</h2>
+          <p class="feature-sub" data-i18n="r.sub">An eye that sees, intelligence that understands, a system that responds. AI crowd safety and intelligent response platform, built by a team of five.</p>
+          <p data-i18n="r.p">Expos bring thousands of visitors across many zones, but cameras, sensors and teams usually work in separate systems with no single operational picture, so incidents are spotted late and are hard to document. RASED brings cameras, microphones, environmental sensors and AI into one platform: it detects an incident the moment it happens, alerts the right team immediately with a snapshot, and documents it in a report ready for review.</p>
+
+          <div class="detects">
+            <div>
+              <h3 class="minor" data-i18n="r.d1">Movement and emergencies, through cameras and audio</h3>
+              <ul class="ticks">
+                <li data-i18n="r.d1a">Sudden crowding and crowd density</li>
+                <li data-i18n="r.d1b">Falls</li>
+                <li data-i18n="r.d1c">Weapons and violence</li>
+                <li data-i18n="r.d1d">Gunshots and explosions</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="minor" data-i18n="r.d2">Indoor environment and safety, through sensors</h3>
+              <ul class="ticks">
+                <li data-i18n="r.d2a">Fire and smoke indicators</li>
+                <li data-i18n="r.d2b">Abnormal heat</li>
+                <li data-i18n="r.d2c">Automatic ventilation</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="minor" data-i18n="r.journey">The alert journey</h3>
+          <div class="flow" aria-label="RASED alert journey">
+            <div class="flow-step" data-i18n="r.s1"><b>Detect</b><span>Cameras and sensors capture the event</span></div>
+            <div class="flow-step" data-i18n="r.s2"><b>Analyse</b><span>AI identifies the type and severity</span></div>
+            <div class="flow-step" data-i18n="r.s3"><b>Alert</b><span>The right team gets it with a snapshot</span></div>
+            <div class="flow-step" data-i18n="r.s4"><b>Respond</b><span>The team handles it on site</span></div>
+            <div class="flow-step" data-i18n="r.s5"><b>Document</b><span>Logged with an editable draft report</span></div>
+            <div class="flow-step" data-i18n="r.s6"><b>Review</b><span>Report checked before approval</span></div>
+          </div>
+
+          <h3 class="minor" data-i18n="r.layers">Four layers, one system</h3>
+          <dl class="layers">
+            <div data-i18n="r.l1"><dt>01 Inputs</dt><dd>Live video and audio from cameras and microphones; temperature, humidity and pressure sensors</dd></div>
+            <div data-i18n="r.l2"><dt>02 Analysis</dt><dd>AI engine (YOLO, VideoMAE, AST) for computer vision and audio; a local control node that runs fans when heat crosses a threshold</dd></div>
+            <div data-i18n="r.l3"><dt>03 Platform</dt><dd>RASED server (FastAPI) that collects, manages and stores events and readings in one place</dd></div>
+            <div data-i18n="r.l4"><dt>04 Outputs</dt><dd>Unified real-time React dashboard, instant Telegram alerts with the image, and draft reports ready for review</dd></div>
+          </dl>
+
+          <h3 class="minor" data-i18n="r.role">My role</h3>
+          <ul class="ticks">
+            <li data-i18n="r.m1">Owned the cyber-physical (IoT/OT) layer: the ESP32 sensor nodes that trigger ventilation, and their FastAPI backend.</li>
+            <li data-i18n="r.m2">Secured it against fake or tampered sensor data: hashed per-node credentials, TLS, heartbeat tracking and cross-node validation.</li>
+            <li data-i18n="r.m3">Made it keep working through network loss, then tested access control on the telemetry and control APIs.</li>
+          </ul>
+
+          <details class="my-part">
+          <summary data-i18n="r.more">Full technical detail</summary>
+          <ul class="ticks">
+            <li data-i18n="r.t1">Built the CPS node: an ESP32 reading a BME280 over I²C and driving 12V ventilation fans through a relay on a temperature threshold.</li>
+            <li data-i18n="r.t2">Built the CPS backend and logic in Python/FastAPI with SQLAlchemy/SQLite: REST APIs for readings, heartbeats and node management, surfaced in the platform dashboard.</li>
+            <li data-i18n="r.t3">Protected reading integrity against fabricated or modified data: per-node credentials stored as hashes, requests bound to node identity over TLS, heartbeat/last-seen tracking and cross-node validation to catch inconsistent readings.</li>
+            <li data-i18n="r.t4">Added offline resilience: nodes buffer readings during network loss and forward them on reconnect (store-and-forward).</li>
+            <li data-i18n="r.t5">HTTPS/TLS and API access-control testing on telemetry and control endpoints.</li>
+            <li data-i18n="r.t6">IoT/OT monitoring dashboards and a Mini Network Operations Center linking sensor data to response workflows.</li>
+          </ul>
+          </details>
+          <ul class="tags" aria-label="Technologies">
+            <li>YOLO</li><li>VideoMAE</li><li>AST</li><li>Python</li><li>FastAPI</li><li>React</li><li>Telegram alerts</li><li>SQLAlchemy</li><li>SQLite</li><li>REST APIs</li><li>ESP32</li><li>BME280</li><li>I²C</li><li>TLS</li><li>IoT/OT</li>
+          </ul>
+          <a class="btn btn-light feature-link" href="https://reemalosaimii.github.io/Rased/" target="_blank" rel="noopener" data-i18n="r.visit">Visit us! RASED website ↗</a>
+        </div>
+      </div>
     </section>
 
-    <section id="resume" class="py-5 bg-light">
-        <div class="container">
-            <h2>Resume</h2>
-            <a href="MUNEERAH AHMED AL AHAIDEEB_Resume.pdf" target="_blank" class="btn btn-primary">Download PDF</a>
-            <button onclick="window.print()" class="btn btn-secondary">Print my Portfolio</button>
+    <!-- WORK -->
+    <section class="section" id="work" aria-labelledby="workTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="workTitle" data-i18n="w.title">Work and labs</h2>
+          <p data-i18n="w.p">Hands-on work in authorised, intentionally vulnerable lab environments, plus projects I built. Each card is labelled for what it is.</p>
         </div>
+
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" class="chip is-on" data-filter="all" aria-pressed="true" data-i18n="f.all">All</button>
+          <button type="button" class="chip" data-filter="offensive" aria-pressed="false" data-i18n="f.off">Penetration testing</button>
+          <button type="button" class="chip" data-filter="iot" aria-pressed="false">IoT / OT</button>
+          <button type="button" class="chip" data-filter="ai" aria-pressed="false" data-i18n="f.ai">AI &amp; fraud</button>
+          <button type="button" class="chip" data-filter="academic" aria-pressed="false" data-i18n="f.acad">Academic</button>
+        </div>
+
+        <div class="projects" id="projects">
+          <article class="project" data-cat="offensive">
+            <header>
+              <span class="status s-lab" data-i18n="st.lab">Lab</span>
+              <span class="year">2026</span>
+            </header>
+            <h3 data-i18n="vb.h">Android banking app security assessment</h3>
+            <p data-i18n="vb.p">Found and demonstrated four issues in a deliberately vulnerable Android banking app: an exported Activity that bypasses protection, hardcoded credentials, insecure local storage and tokens leaked in logcat.</p>
+            <details>
+              <summary data-i18n="did">What I did</summary>
+              <ul>
+                <li data-i18n="vb.1">Ran static and dynamic analysis using the Android Studio Emulator, ADB and JADX.</li>
+                <li data-i18n="vb.2">Inspected AndroidManifest.xml and exploited an exported Activity, launching it directly with ADB to reach a screen meant to be protected.</li>
+                <li data-i18n="vb.3">Decompiled the APK with JADX and found hardcoded credentials and sensitive information.</li>
+                <li data-i18n="vb.4">Inspected SharedPreferences and local storage for insecurely stored data.</li>
+                <li data-i18n="vb.5">Checked logcat output for exposed tokens, and wrote up each finding with evidence, impact and a fix.</li>
+              </ul>
+            </details>
+            <ul class="tags"><li>ADB</li><li>JADX</li><li>Android Studio Emulator</li></ul>
+          </article>
+
+          <article class="project" data-cat="offensive">
+            <header>
+              <span class="status s-lab" data-i18n="st.lab">Lab</span>
+              <span class="year">2026</span>
+            </header>
+            <h3>PortSwigger Web Security Academy</h3>
+            <p data-i18n="ps.p">Access control and authentication labs worked through in Burp Suite.</p>
+            <details>
+              <summary data-i18n="did">What I did</summary>
+              <ul>
+                <li data-i18n="ps.1">Intercepted and modified HTTP traffic with Burp Proxy, Repeater and Intruder.</li>
+                <li data-i18n="ps.2">IDOR and horizontal/vertical access control flaws.</li>
+                <li data-i18n="ps.3">Authorization bypass by changing the HTTP method.</li>
+                <li data-i18n="ps.4">Flawed multi-step processes, X-Original-URL header bypass and Referer-based access control.</li>
+                <li data-i18n="ps.5">Username enumeration in authentication labs.</li>
+              </ul>
+            </details>
+            <ul class="tags"><li>Burp Suite</li><li>Access control</li><li>Authentication</li></ul>
+          </article>
+
+          <article class="project" data-cat="offensive">
+            <header>
+              <span class="status s-lab" data-i18n="st.lab">Lab</span>
+              <span class="year">2026</span>
+            </header>
+            <h3>OWASP Juice Shop</h3>
+            <p data-i18n="js.p">Vulnerability assessment of an intentionally insecure web shop against the OWASP Top 10.</p>
+            <details>
+              <summary data-i18n="did">What I did</summary>
+              <ul>
+                <li data-i18n="js.1">Discovered hidden administrative routes.</li>
+                <li data-i18n="js.2">Exploited broken access control and IDOR.</li>
+                <li data-i18n="js.3">Found a deprecated interface and tested XML-related upload handling.</li>
+              </ul>
+            </details>
+            <ul class="tags"><li>OWASP Top 10</li><li>Burp Suite</li></ul>
+          </article>
+
+          <article class="project" data-cat="offensive">
+            <header>
+              <span class="status s-lab" data-i18n="st.lab">Lab</span>
+              <span class="year">2025–26</span>
+            </header>
+            <h3 data-i18n="nw.h">Network attack and traffic analysis</h3>
+            <p data-i18n="nw.p">Reconnaissance, network attacks and incident investigation in isolated lab networks.</p>
+            <details>
+              <summary data-i18n="did">What I did</summary>
+              <ul>
+                <li data-i18n="nw.1">Mapped hosts and services with Nmap.</li>
+                <li data-i18n="nw.2">Ran and analysed ARP spoofing, DNS spoofing and DHCP attacks.</li>
+                <li data-i18n="nw.3">Investigated incident exercises from packet captures in Wireshark and reported the findings.</li>
+              </ul>
+            </details>
+            <ul class="tags"><li>Nmap</li><li>Wireshark</li><li>TCP/IP</li></ul>
+          </article>
+
+          <article class="project" data-cat="ai">
+            <header>
+              <span class="status s-dev" data-i18n="st.dev">In development</span>
+              <span class="year" data-i18n="bs.year">May 2026 – present</span>
+            </header>
+            <h3>Bank Shield</h3>
+            <p data-i18n="bs.p">AI pre-login fraud and SIM-swap detection. Scores behaviour and context before a user signs in, and only steps in when the risk looks like account takeover (ATO) or a SIM-swap attempt.</p>
+            <ul class="tags"><li>Fraud detection</li><li>ATO</li><li>Behavioural analytics</li></ul>
+          </article>
+
+          <article class="project" data-cat="iot">
+            <header>
+              <span class="status s-built" data-i18n="st.built">Built</span>
+              <span class="year">2024</span>
+            </header>
+            <h3 data-i18n="hy.h">Smart cyber-physical hydroponic system</h3>
+            <p data-i18n="hy.p">A secure wick hydroponic system with remote monitoring and control through Blynk.</p>
+            <ul class="tags"><li>Arduino Uno</li><li>ESP8266</li><li>Blynk</li></ul>
+          </article>
+
+          <article class="project" data-cat="iot ai">
+            <header>
+              <span class="status s-award" data-i18n="st.award">2nd place</span>
+              <span class="year">2026</span>
+            </header>
+            <h3 data-i18n="r.title">RASED</h3>
+            <p data-i18n="rc.p">AI crowd safety and intelligent response platform: detects crowding, falls, weapons, gunshots and fire, alerts the right team and drafts the incident report. Team project, Riyadh Expo 2030 Challenge.</p>
+            <p class="card-links"><a class="more" href="#rasedTitle" data-i18n="rc.more">Read the full write-up</a> &nbsp;·&nbsp; <a class="more" href="https://reemalosaimii.github.io/Rased/" target="_blank" rel="noopener" data-i18n="rc.visit">Visit us ↗</a></p>
+            <ul class="tags"><li>AI detection</li><li>FastAPI</li><li>IoT security</li></ul>
+          </article>
+
+          <article class="project" data-cat="academic">
+            <header><span class="status s-acad" data-i18n="st.acad">Academic</span></header>
+            <h3 data-i18n="ac1.h">Google Chrome security assessment</h3>
+            <p data-i18n="ac1.p">Security analysis of the browser, applying secure software development practices.</p>
+          </article>
+          <article class="project" data-cat="academic">
+            <header><span class="status s-acad" data-i18n="st.acad">Academic</span></header>
+            <h3>Pre-Cloud Hotel</h3>
+            <p data-i18n="ac2.p">A hotel website with self check-in.</p>
+          </article>
+          <article class="project" data-cat="academic">
+            <header><span class="status s-acad" data-i18n="st.acad">Academic</span></header>
+            <h3 data-i18n="ac3.h">Smart Flock Tracking</h3>
+            <p data-i18n="ac3.p">Database and prototype app for livestock records: birth, weight and medical history.</p>
+          </article>
+          <article class="project" data-cat="academic">
+            <header><span class="status s-acad" data-i18n="st.acad">Academic</span></header>
+            <h3 data-i18n="ac4.h">Employment of Talented People</h3>
+            <p data-i18n="ac4.p">A hiring and monitoring platform designed with systems analysis and design methods.</p>
+          </article>
+          <article class="project" data-cat="academic">
+            <header><span class="status s-acad" data-i18n="st.acad">Academic</span></header>
+            <h3 data-i18n="ac5.h">Process redesign with TOGAF and BPM</h3>
+            <p data-i18n="ac5.p">Restructured a small organisation's marketing and demo processes with TOGAF, and automated a tech company's marketing emails with BPM.</p>
+          </article>
+        </div>
+        <p class="empty" id="emptyMsg" hidden data-i18n="w.empty">No projects in this category yet. Choose another filter.</p>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-3">
-        <div class="container text-center">
-            <p>&copy; 2026 My Portfolio</p>
+    <!-- EXPERIENCE -->
+    <section class="section alt" id="experience" aria-labelledby="expTitle">
+      <div class="wrap two-col">
+        <h2 id="expTitle" data-i18n="e.title">Experience</h2>
+        <div class="jobs">
+        <div class="job">
+          <div class="job-head">
+            <h3 data-i18n="e.zain">Cybersecurity Specialist Intern, Zain KSA</h3>
+            <span class="year" data-i18n="e.zainy">Sep 2024 – Mar 2025</span>
+          </div>
+          <p class="job-sub" data-i18n="e.zains">Riyadh. Cooperative training.</p>
+          <dl class="duties">
+            <div data-i18n="e.d1"><dt>SOC operations</dt><dd>Monitored security logs and ran advanced searches in Elastic SIEM; managed SOC tickets and produced reports.</dd></div>
+            <div data-i18n="e.d2"><dt>Vulnerability management</dt><dd>Ran vulnerability assessments and wrote detailed reports to support risk mitigation.</dd></div>
+            <div data-i18n="e.d3"><dt>GRC and auditing</dt><dd>Auditing Champion for internal GRC audits against NCA ECC and CCC.</dd></div>
+            <div data-i18n="e.d4"><dt>Cloud security</dt><dd>Managed and secured Alibaba Cloud IaaS and SaaS environments.</dd></div>
+          </dl>
         </div>
-    </footer>
 
-    <!-- Bootstrap JavaScript and Custom JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <div class="job" id="ctf">
+          <div class="job-head">
+            <h3 data-i18n="e.ctf">Capture the Flag competitions</h3>
+            <span class="year">2026</span>
+          </div>
+          <p class="job-sub" data-i18n="e.ctfs">Team competitions.</p>
+          <dl class="duties">
+            <div data-i18n="e.c1"><dt>Black Hat MEA CTF</dt><dd>Played the qualifier on FlagYard; my team captured three flags and qualified to compete in the Black Hat MEA CTF in December 2026.</dd></div>
+            <div data-i18n="e.c2"><dt>Tuwaiq Cyber Challenge</dt><dd>Competed in Tuwaiq Academy's cybersecurity CTF challenge.</dd></div>
+          </dl>
+        </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skillsTitle">
+      <div class="wrap two-col">
+        <h2 id="skillsTitle" data-i18n="s.title">Skills</h2>
+        <div class="skill-groups">
+          <div class="sg"><h3 data-i18n="s.1h">Penetration testing</h3><p data-i18n="s.1p">OWASP Top 10, broken access control and IDOR, authorization bypass, authentication testing, HTTP request tampering, Android static and dynamic analysis, network reconnaissance, ARP/DNS spoofing, DHCP attacks, reporting</p></div>
+          <div class="sg"><h3 data-i18n="s.2h">Tools</h3><p>Burp Suite (Proxy, Repeater, Intruder), Nmap, Wireshark, Metasploit, Gobuster, ADB, JADX, Android Studio Emulator, Elastic SIEM, Git</p></div>
+          <div class="sg"><h3 data-i18n="s.3h">Detection, SOC and GRC</h3><p data-i18n="s.3p">Elastic SIEM monitoring, log analysis, SOC ticketing, vulnerability assessment, internal audit, risk management, NCA ECC / CCC / DCC, ISO/IEC 27001, NIST CSF, MITRE ATT&amp;CK</p></div>
+          <div class="sg"><h3 data-i18n="s.4h">IoT, OT and CPS</h3><p data-i18n="s.4p">ESP32, ESP8266, Arduino Uno, BME280, I²C/GPIO, PlatformIO, relay actuation, sensor telemetry, device authentication, Blynk</p></div>
+          <div class="sg"><h3 data-i18n="s.5h">Development</h3><p>Python, FastAPI, SQLAlchemy, REST APIs, SQL, Java, JavaScript, PHP, C, C#, Kotlin, HTML, CSS</p></div>
+          <div class="sg"><h3 data-i18n="s.6h">Cloud and systems</h3><p data-i18n="s.6p">Alibaba Cloud, AWS fundamentals, Kali, Ubuntu, Debian, CentOS, Windows and Windows Server, TCP/IP, TLS</p></div>
+          <div class="sg"><h3 data-i18n="s.7h">Modelling and architecture</h3><p>TOGAF, Zachman, DoDAF, BPMN, ArchiMate, UML, ERD, DFD, Agile, Six Sigma</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="section alt" id="credentials" aria-labelledby="credTitle">
+      <div class="wrap two-col">
+        <h2 id="credTitle" data-i18n="c.title">Education and credentials</h2>
+        <div class="creds">
+          <div class="cred-block">
+            <h3 data-i18n="c.edu">Education</h3>
+            <div class="row"><span data-i18n="c.edu1"><b>B.S. Information Systems, Cybersecurity track</b><br>Prince Sultan University, Riyadh. Coursework in penetration testing and ethical hacking, and cyber-physical system security.</span><span class="year">2025</span></div>
+          </div>
+          <div class="cred-block">
+            <h3 data-i18n="c.cert">Certification</h3>
+            <div class="row"><span><b>CompTIA Security+</b></span><span class="year" data-i18n="c.certy">Nov 2024</span></div>
+          </div>
+          <div class="cred-block">
+            <h3 data-i18n="c.boot">Bootcamps and training programs</h3>
+            <div class="row"><span data-i18n="c.b1"><b>Cybersecurity Solutions &amp; Analytics Bootcamp</b><br>Kaspersky × Tuwaiq Academy</span><span class="year" data-i18n="c.b1y">Oct 2026</span></div>
+            <div class="row"><span data-i18n="c.b2"><b>Cybercrime and Network Forensics</b><br>Tuwaiq Academy</span><span class="year" data-i18n="c.b2y">Jul 2025</span></div>
+          </div>
+          <div class="cred-block">
+            <h3 data-i18n="c.learn">Learning paths and courses</h3>
+            <div class="row"><span data-i18n="c.l1"><b>Jr Penetration Tester path</b>, TryHackMe (in progress)</span><span class="year">2026</span></div>
+            <div class="row"><span data-i18n="c.l2"><b>AWS Cloud Practitioner Essentials</b> (course)</span><span class="year" data-i18n="c.l2y">Jun 2026</span></div>
+            <div class="row"><span><b>Linux Fundamentals</b>, Coursera</span><span class="year">2024</span></div>
+            <div class="row"><span data-i18n="c.l4"><b>eJPT</b> (eLearnSecurity Junior Penetration Tester), preparing</span><span class="year" data-i18n="c.l4y">Ongoing</span></div>
+            <details class="older">
+              <summary data-i18n="c.older">Show 10 earlier courses</summary>
+              <div class="row"><span>Google Support, Coursera</span><span class="year">2024</span></div>
+              <div class="row"><span>Introduction to Cybersecurity, Doroob</span><span class="year">2024</span></div>
+              <div class="row"><span>Ethics, Technology and Engineering, Coursera</span><span class="year">2024</span></div>
+              <div class="row"><span>Introduction to Microsoft Excel, Coursera</span><span class="year">2024</span></div>
+              <div class="row"><span>Agile Meets Design Thinking, Coursera</span><span class="year">2023</span></div>
+              <div class="row"><span>Blockchain Development, PSU</span><span class="year">2023</span></div>
+              <div class="row"><span>Android Apps Programming Camp, Code for Girls</span><span class="year">2022</span></div>
+              <div class="row"><span>Cyber Security Tools &amp; Cyber Attacks, OSH Academy</span><span class="year">2022</span></div>
+              <div class="row"><span>Cyber Security Risk Management, OSH Academy</span><span class="year">2022</span></div>
+              <div class="row"><span>Introduction to Data Science for Beginners, PSU</span><span class="year">2021</span></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contactTitle">
+      <div class="wrap">
+        <h2 id="contactTitle" data-i18n="ct.title">Building a red or purple team?</h2>
+        <p data-i18n="ct.p">I'd like to hear about it. Email is the fastest way to reach me.</p>
+        <div class="contact-row">
+          <button class="btn btn-light" id="copyEmail" type="button" data-email="AmuneerahA@gmail.com" data-i18n="ct.copy">Copy email</button>
+          <a class="contact-link" href="mailto:AmuneerahA@gmail.com">AmuneerahA@gmail.com</a>
+          <a class="contact-link" href="https://www.linkedin.com/in/muneerah-alahaideeb-b99896231/" target="_blank" rel="noopener" data-i18n="ct.li">LinkedIn</a>
+          <a class="contact-link" href="tel:+966551474957" dir="ltr">+966 55 147 4957</a>
+        </div>
+        <p class="toast" id="toast" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span data-i18n="ft.c">© 2026 Muneerah Ahmed Alahaideeb</span>
+      <a href="#top" data-i18n="ft.top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Mini chatbot -->
+  <div class="chat" id="chat">
+    <button class="chat-fab" id="chatFab" type="button" aria-expanded="false" aria-controls="chatPanel">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>
+      <span class="chat-fab-label" data-i18n="chat.fab">Ask about me</span>
+    </button>
+    <section class="chat-panel" id="chatPanel" hidden aria-labelledby="chatTitle">
+      <header class="chat-head">
+        <div>
+          <h2 id="chatTitle" data-i18n="chat.title">Ask about Muneerah</h2>
+          <p data-i18n="chat.sub">Quick answers from this page</p>
+        </div>
+        <button class="icon-btn chat-close" id="chatClose" type="button" aria-label="Close chat">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </header>
+      <div class="chat-log" id="chatLog" aria-live="polite"></div>
+      <div class="chat-chips" id="chatChips"></div>
+      <form class="chat-form" id="chatForm" autocomplete="off">
+        <input id="chatInput" type="text" maxlength="200" aria-label="Your question" placeholder="Type a question…">
+        <button class="btn btn-small" type="submit" data-i18n="chat.send">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+  <script src="sky.js"></script>
+  <script src="chat.js"></script>
 </body>
 </html>
