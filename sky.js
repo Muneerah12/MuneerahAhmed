@@ -270,6 +270,19 @@
     }
   });
 
+  // Hidden CTF solved (chat.js): celebrate.
+  document.addEventListener('flagcaptured', () => {
+    if (reduceMQ.matches) return;
+    const o = orb();
+    if (isDark()) {
+      for (let i = 0; i < 12; i++) setTimeout(() => spawnShooter(), i * 120);
+      burst(o.x, o.y, 30, ['#FFF6DA', '#CFE0FF', '#E86F83']);
+    } else {
+      burst(o.x, o.y, 40, ['#FFD65A', '#FFB937', '#FFF1A8']);
+      setTimeout(() => burst(W / 2, H / 3, 40, ['#FFD65A', '#E86F83', '#FFF1A8']), 250);
+    }
+  });
+
   new MutationObserver(() => { if (!running) { mix = isDark() ? 1 : 0; draw(performance.now(), 0); } })
     .observe(root, { attributes: true, attributeFilter: ['data-theme'] });
   darkMQ.addEventListener?.('change', () => { if (!running) { mix = isDark() ? 1 : 0; draw(performance.now(), 0); } });

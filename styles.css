@@ -333,6 +333,8 @@ details ul { margin: 8px 0 0; padding-inline-start: 18px; font-size: .94rem; dis
 .msg.me { align-self: flex-end; background: var(--ink); color: var(--paper); border-end-end-radius: 4px; }
 .msg a { color: var(--accent); font-weight: 500; }
 .msg b { color: var(--ink); }
+.msg code { font: 500 .85rem var(--mono); }
+.msg code.flag { display: inline-block; margin: 6px 0; padding: 6px 10px; border-radius: 8px; background: var(--code-bg); color: #FFD479; overflow-wrap: anywhere; user-select: all; }
 .msg.typing { display: inline-flex; gap: 4px; padding: 13px 14px; }
 .msg.typing span { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: blink 1s infinite; }
 .msg.typing span:nth-child(2) { animation-delay: .15s; }

@@ -114,6 +114,26 @@
     ],
   };
 
+  /* ---------- Hidden CTF ----------
+     Step 1: a hint in the browser console. Step 2: an HTML comment in the page source.
+     Step 3: the decoded command, typed into this chat. */
+  const FLAG = atob('TVVORUVSQUh7Y3VyaTBzMXR5XzFzX2FfczNjdXIxdHlfc2sxbGx9');
+  const EGG = {
+    win: [
+      `🚩 <b>Flag captured!</b><br><code class="flag">${FLAG}</code><br>You think like a hacker, and so do I. If you're hiring for a red or purple team, let's talk: <a href="mailto:AmuneerahA@gmail.com">AmuneerahA@gmail.com</a>`,
+      `🚩 <b>التقطت العلم!</b><br><code class="flag" dir="ltr">${FLAG}</code><br>تفكر مثل المخترقين، وأنا كذلك. إذا كنت تبحث عن عضو لفريق أحمر أو بنفسجي، لنتحدث: <a href="mailto:AmuneerahA@gmail.com">AmuneerahA@gmail.com</a>`,
+    ],
+    denied: [
+      '🔒 <code>flag</code>: Permission denied. Maybe you need more privileges… 😉',
+      '🔒 <code>flag</code>: الصلاحية مرفوضة. ربما تحتاج صلاحيات أعلى… 😉',
+    ],
+  };
+  try {
+    console.log('%c👀 You opened DevTools. That\'s exactly what I\'d do.', 'font: 600 14px system-ui; color: #E86F83');
+    console.log('%cA flag is hidden on this page. Start where developers leave notes. 🚩', 'font: 13px system-ui');
+    console.log('%cفتحت أدوات المطوّر؟ هذا بالضبط ما كنت سأفعله. هناك علم مخفي في هذه الصفحة، ابدأ من حيث يترك المطورون ملاحظاتهم. 🚩', 'font: 13px system-ui');
+  } catch (e) {}
+
   const norm = (s) => s.toLowerCase()
     .replace(/[ً-ْـ]/g, '')
     .replace(/[أإآ]/g, 'ا').replace(/ة/g, 'ه').replace(/ى/g, 'ي')
@@ -198,6 +218,13 @@
     if (!q) return;
     add('me', q, true);
     input.value = '';
+    const cmd = norm(q).replace(/^\$\s*/, '');
+    if (cmd === 'sudo flag' || cmd === 'sudo cat flag' || cmd === 'sudo cat flag.txt') {
+      reply(EGG.win[L()]);
+      setTimeout(() => document.dispatchEvent(new CustomEvent('flagcaptured')), 450);
+      return;
+    }
+    if (cmd === 'flag' || cmd === 'cat flag' || cmd === 'cat flag.txt') { reply(EGG.denied[L()]); return; }
     const tp = match(q);
     reply(tp ? (L() ? tp.ar : tp.en) : UI.fallback[L()]);
   });
