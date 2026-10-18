@@ -117,11 +117,16 @@
   /* ---------- Hidden CTF ----------
      Step 1: a hint in the browser console. Step 2: an HTML comment in the page source.
      Step 3: the decoded command, typed into this chat. */
+  let flag1 = false;
   const FLAG = atob('TVVORUVSQUh7Y3VyaTBzMXR5XzFzX2FfczNjdXIxdHlfc2sxbGx9');
   const EGG = {
     win: [
-      `🚩 <b>Flag captured!</b><br><code class="flag">${FLAG}</code><br>You think like a hacker, and so do I. If you're hiring for a red or purple team, let's talk: <a href="mailto:AmuneerahA@gmail.com">AmuneerahA@gmail.com</a>`,
-      `🚩 <b>التقطت العلم!</b><br><code class="flag" dir="ltr">${FLAG}</code><br>تفكر مثل المخترقين، وأنا كذلك. إذا كنت تبحث عن عضو لفريق أحمر أو بنفسجي، لنتحدث: <a href="mailto:AmuneerahA@gmail.com">AmuneerahA@gmail.com</a>`,
+      `🚩 <b>Flag captured!</b><br><code class="flag">${FLAG}</code><br>You think like a hacker, and so do I. If you're hiring for a red or purple team, let's talk: <a href="mailto:AmuneerahA@gmail.com">AmuneerahA@gmail.com</a><br><br>🚩 <b>1/2 flags captured.</b> The second one belongs to someone more important than a customer. Go back to the <a href="#labTitle">IDOR demo</a> at the top, and read closely what the server tells you.`,
+      `🚩 <b>التقطت العلم!</b><br><code class="flag" dir="ltr">${FLAG}</code><br>تفكر مثل المخترقين، وأنا كذلك. إذا كنت تبحث عن عضو لفريق أحمر أو بنفسجي، لنتحدث: <a href="mailto:AmuneerahA@gmail.com">AmuneerahA@gmail.com</a><br><br>🚩 <b>التقطت 1 من 2.</b> العلم الثاني يخص شخصًا أهم من مجرد عميل. ارجع إلى <a href="#labTitle">عرض IDOR</a> في أعلى الصفحة، وانتبه جيدًا لما يقوله الخادم.`,
+    ],
+    hint1: [
+      '💡 There are 2 hidden flags. For the first: open DevTools (press <b>F12</b>) and read the <b>Console</b>. Then look where developers leave notes: the page source (<b>Ctrl + U</b>).',
+      '💡 في هذه الصفحة علمان مخفيان. للأول: افتح أدوات المطوّر (اضغط <b>F12</b>) واقرأ الـ <b>Console</b>. ثم ابحث حيث يترك المطورون ملاحظاتهم: مصدر الصفحة (<b>Ctrl + U</b>).',
     ],
     denied: [
       '🔒 <code>flag</code>: Permission denied. Maybe you need more privileges… 😉',
@@ -221,7 +226,12 @@
     const cmd = norm(q).replace(/^\$\s*/, '');
     if (cmd === 'sudo flag' || cmd === 'sudo cat flag' || cmd === 'sudo cat flag.txt') {
       reply(EGG.win[L()]);
-      setTimeout(() => document.dispatchEvent(new CustomEvent('flagcaptured')), 450);
+      flag1 = true;
+      setTimeout(() => { document.dispatchEvent(new CustomEvent('flagcaptured')); document.dispatchEvent(new CustomEvent('flag1')); }, 450);
+      return;
+    }
+    if (['hint', 'hints', 'help ctf', 'تلميح', 'هنت', 'مساعده'].includes(cmd)) {
+      reply(!flag1 ? EGG.hint1[L()] : `${window.nextHint ? window.nextHint() : ''} <a href="#labTitle">${L() ? 'اذهب إلى العرض ↑' : 'Go to the demo ↑'}</a>`);
       return;
     }
     if (cmd === 'flag' || cmd === 'cat flag' || cmd === 'cat flag.txt') { reply(EGG.denied[L()]); return; }

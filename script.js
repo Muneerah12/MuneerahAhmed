@@ -63,21 +63,49 @@
     1041: ['Sara A.', '5,210.00'], 1042: ['Faisal K.', '18,940.50'], 1043: ['You', '2,375.25'],
     1044: ['Noura M.', '41,002.10'], 1045: ['Omar S.', '760.00'], 1046: ['Lama H.', '12,480.75'],
   };
+  // Hidden flag 2: the admin account (1000) sits below the range the buttons reach.
+  const ADMIN = 1000;
+  const FLAG2 = atob('TVVORUVSQUh7MWQwcl90MF80ZG0xbl9nNG0zXzB2M3J9');
   let id = OWN, fixed = false;
   const idOut = $('#acctId'), res = $('#response'), verdict = $('#verdict'), hint = $('#labHint');
-  const setId = (n) => { id = Math.max(1001, Math.min(1099, n)); idOut.textContent = id; idOut.classList.toggle('changed', id !== OWN); };
-  $('#idUp').addEventListener('click', () => setId(id + 1));
-  $('#idDown').addEventListener('click', () => setId(id - 1));
+  const setId = (n) => { id = n; idOut.value = id; idOut.classList.toggle('changed', id !== OWN); };
+  $('#idUp').addEventListener('click', () => setId(Math.min(1099, Math.max(1001, id + 1))));
+  $('#idDown').addEventListener('click', () => setId(Math.min(1099, Math.max(1001, id - 1))));
+  idOut.addEventListener('input', () => {
+    idOut.value = idOut.value.replace(/\D/g, '').slice(0, 4);
+    id = parseInt(idOut.value, 10);
+    idOut.classList.toggle('changed', id !== OWN);
+  });
+  idOut.addEventListener('focus', () => idOut.select());
+  idOut.addEventListener('click', () => idOut.select());
+  idOut.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); $('#sendReq').click(); } });
 
   const esc = s => String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+  // Hint button for flag 2: shows after flag 1 is found or after a few tries here.
+  const hintBtn = $('#hintBtn'), tip = $('#labTip');
+  let sends = 0, hintLevel = 0;
+  const showHintBtn = () => { hintBtn.hidden = false; };
+  const renderTip = () => { if (hintLevel) { tip.textContent = t('hint' + hintLevel); tip.hidden = false; } };
+  hintBtn.addEventListener('click', () => { hintLevel = Math.min(3, hintLevel + 1); renderTip(); });
+  document.addEventListener('flag1', showHintBtn);
+  window.nextHint = () => { hintLevel = Math.min(3, hintLevel + 1); showHintBtn(); renderTip(); return t('hint' + hintLevel); };
+
+  const body = (i, p) => `{ <span class="k">"id"</span>: ${i}, <span class="k">"owner"</span>: "${esc(p[0])}", <span class="k">"role"</span>: "customer", <span class="k">"balance"</span>: "${p[1]} SAR" }`;
   $('#sendReq').addEventListener('click', () => {
-    const p = people[id] || ['(record)', '—'];
+    if (++sends >= 3) showHintBtn();
     let html, v = '', safe = false;
-    if (id === OWN) {
-      html = `<span class="st-ok">HTTP/1.1 200 OK</span>\n{ <span class="k">"id"</span>: ${id}, <span class="k">"owner"</span>: "${esc(p[0])}", <span class="k">"balance"</span>: "${p[1]} SAR" }`;
+    if (!Number.isInteger(id) || id < 1000 || id > 1099) {
+      html = `<span class="st-ok">HTTP/1.1 404 Not Found</span>\n{ <span class="k">"error"</span>: "account not found" }`;
+      v = t('labNotFound'); safe = true;
+    } else if (id === ADMIN) {
+      html = `<span class="st-bad">HTTP/1.1 200 OK</span>\n{ <span class="k">"id"</span>: ${id}, <span class="k">"owner"</span>: "admin", <span class="k">"role"</span>: "admin", <span class="k">"note"</span>: "<span class="flag2">${FLAG2}</span>" }`;
+      v = (fixed ? t('labFlagFixed') : t('labFlagOpen')) + ' ' + t('labFlagEnd');
+      document.dispatchEvent(new CustomEvent('flagcaptured'));
+    } else if (id === OWN) {
+      html = `<span class="st-ok">HTTP/1.1 200 OK</span>\n${body(id, people[id])}`;
       v = t('labOwn'); safe = true;
     } else if (!fixed) {
-      html = `<span class="st-bad">HTTP/1.1 200 OK</span>\n{ <span class="k">"id"</span>: ${id}, <span class="k">"owner"</span>: "${esc(p[0])}", <span class="k">"balance"</span>: "${p[1]} SAR" }`;
+      html = `<span class="st-bad">HTTP/1.1 200 OK</span>\n${body(id, people[id] || ['(record)', '—'])}`;
       v = t('labIdor');
       fixed = true;
     } else {
@@ -87,7 +115,7 @@
     res.innerHTML = html;
     res.classList.remove('flash'); void res.offsetWidth; res.classList.add('flash');
     verdict.textContent = v; verdict.hidden = false; verdict.classList.toggle('safe', safe);
-    if (fixed && id !== OWN) hint.textContent = t('labPatched');
+    if (fixed && id !== OWN && id !== ADMIN) hint.textContent = t('labPatched');
   });
   const resetDemo = () => {
     setId(OWN); fixed = false;
@@ -112,5 +140,6 @@
     syncThemeLabel();
     setMenu(nav.classList.contains('open'));
     resetDemo();
+    renderTip();
   });
 })();

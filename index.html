@@ -75,14 +75,16 @@
           </div>
           <div class="lab-body">
             <p class="lab-hint" id="labHint">This is an intercepted request for <em>your own</em> account. Change the account ID and send it.</p>
-<pre class="req" dir="ltr" aria-label="HTTP request"><span class="m">GET</span> /api/v1/accounts/<span class="idwrap"><button type="button" class="id-step" id="idDown" aria-label="Decrease account ID">−</button><output id="acctId" class="id-val">1043</output><button type="button" class="id-step" id="idUp" aria-label="Increase account ID">+</button></span> HTTP/1.1
+<pre class="req" dir="ltr" aria-label="HTTP request"><span class="m">GET</span> /api/v1/accounts/<span class="idwrap"><button type="button" class="id-step" id="idDown" aria-label="Decrease account ID">−</button><input id="acctId" class="id-val" type="text" inputmode="numeric" maxlength="4" size="4" value="1043" aria-label="Account ID" spellcheck="false"><button type="button" class="id-step" id="idUp" aria-label="Increase account ID">+</button></span> HTTP/1.1
 Host: bank.example
 Cookie: session=<span class="tok">u1043·8f2c…</span>
 Accept: application/json</pre>
             <div class="lab-controls">
               <button class="btn btn-small" id="sendReq" type="button" data-i18n="lab.send">Send request</button>
               <button class="link-btn" id="resetReq" type="button" data-i18n="lab.reset">Reset</button>
+              <button class="link-btn hint-btn" id="hintBtn" type="button" hidden data-i18n="lab.hint">💡 Hint</button>
             </div>
+            <p class="lab-tip" id="labTip" hidden></p>
             <pre class="res" id="response" dir="ltr" aria-live="polite"><span class="muted">Response will appear here.</span></pre>
             <p class="lab-verdict" id="verdict" hidden></p>
           </div>
