@@ -14,8 +14,8 @@
     {
       id: 'about', chip: ['Who is she?', 'من هي منيرة؟'],
       keys: ['who is', 'who\'s', 'whois', 'introduce', 'yourself', 'summary', 'background', 'من هي', 'من انت', 'عرفني', 'نبذه', 'تعريف'],
-      en: 'Muneerah Alahaideeb is a cybersecurity specialist in Riyadh, growing into offensive security. She is <b>CompTIA Security+</b> certified, did SOC and vulnerability management work at <b>Zain KSA</b>, won <b>2nd place</b> at the Riyadh Expo 2030 Challenge with RASED, and her team <b>qualified for the Black Hat MEA CTF</b> (December 2026).',
-      ar: 'منيرة الاحيدب متخصصة في الأمن السيبراني من الرياض، تتجه نحو الأمن الهجومي. حاصلة على <b>CompTIA Security+</b>، وعملت في مركز العمليات الأمنية وإدارة الثغرات لدى <b>زين السعودية</b>، وحصلت مع فريقها على <b>المركز الثاني</b> في تحدي إكسبو الرياض 2030 بمشروع راصد، و<b>تأهل فريقها لمسابقة Black Hat MEA CTF</b> (ديسمبر 2026).',
+      en: 'Muneerah Alahaideeb is a cybersecurity specialist in Riyadh, growing into offensive security. She is <b>CompTIA Security+</b> certified, did SOC and vulnerability management work at <b>Zain KSA</b>, won <b>2nd place</b> at the Riyadh Expo 2030 Challenge with RASED, and is <b>team leader</b> of a CTF team that <b>qualified for the Black Hat MEA CTF</b> (December 2026).',
+      ar: 'منيرة الاحيدب متخصصة في الأمن السيبراني من الرياض، تتجه نحو الأمن الهجومي. حاصلة على <b>CompTIA Security+</b>، وعملت في مركز العمليات الأمنية وإدارة الثغرات لدى <b>زين السعودية</b>، وحصلت مع فريقها على <b>المركز الثاني</b> في تحدي إكسبو الرياض 2030 بمشروع راصد، وهي <b>قائدة فريق</b> CTF <b>تأهل لمسابقة Black Hat MEA CTF</b> (ديسمبر 2026).',
     },
     {
       id: 'rased', chip: ['RASED', 'راصد'],
@@ -26,14 +26,14 @@
     {
       id: 'ctf', chip: ['CTFs', 'مسابقات CTF'],
       keys: ['ctf', 'black hat', 'blackhat', 'flag', 'flagyard', 'competition', 'tuwaiq challenge', 'mea', 'مسابق', 'بلاك هات', 'اعلام', 'تحدي طويق'],
-      en: 'Her team played the <b>Black Hat MEA CTF</b> qualifier on FlagYard, captured <b>three flags</b> and qualified to compete at Black Hat MEA in <b>December 2026</b>. She also competed in the <b>Tuwaiq Cyber Challenge</b>. <a href="#ctf">See the details</a>',
-      ar: 'شارك فريقها في تصفيات <b>Black Hat MEA CTF</b> على منصة FlagYard، والتقط <b>ثلاثة أعلام</b> وتأهل للمنافسة في Black Hat MEA في <b>ديسمبر 2026</b>. كما شاركت في <b>تحدي طويق السيبراني</b>. <a href="#ctf">التفاصيل</a>',
+      en: 'She is the <b>team leader</b> of her CTF team. Together they played the <b>Black Hat MEA CTF</b> qualifier on FlagYard, captured <b>three flags</b> and qualified to compete at Black Hat MEA in <b>December 2026</b>. She also competed in the <b>Tuwaiq Cyber Challenge</b>. <a href="#ctf">See the details</a>',
+      ar: 'منيرة <b>قائدة فريقها</b> في مسابقات CTF. شارك الفريق معًا في تصفيات <b>Black Hat MEA CTF</b> على منصة FlagYard، والتقط الفريق <b>ثلاثة أعلام</b> وتأهل للمنافسة في Black Hat MEA في <b>ديسمبر 2026</b>. كما شاركت في <b>تحدي طويق السيبراني</b>. <a href="#ctf">التفاصيل</a>',
     },
     {
       id: 'exp', chip: ['Experience', 'الخبرات'],
       keys: ['experience', 'zain', 'intern', 'internship', 'job', 'worked', 'soc', 'siem', 'خبره', 'خبرات', 'زين', 'تدريب', 'تدربت', 'وظيفه', 'عملت', 'مركز العمليات'],
-      en: 'Cybersecurity Specialist Intern at <b>Zain KSA</b> (Sep 2024 – Mar 2025, cooperative training): monitored logs and ran advanced searches in Elastic SIEM, managed SOC tickets, ran vulnerability assessments, was Auditing Champion for internal audits against NCA ECC and CCC, and secured Alibaba Cloud environments. <a href="#experience">See experience</a>',
-      ar: 'أخصائية أمن سيبراني متدربة في <b>زين السعودية</b> (سبتمبر 2024 – مارس 2025، تدريب تعاوني): راقبت السجلات وأجرت عمليات بحث متقدمة في Elastic SIEM، وأدارت تذاكر SOC، وأجرت تقييمات للثغرات، وكانت Auditing Champion في التدقيق الداخلي وفق ضوابط NCA ECC وCCC، وأمّنت بيئات Alibaba Cloud. <a href="#experience">عرض الخبرات</a>',
+      en: 'Cybersecurity Specialist Intern at <b>Zain KSA</b> (Sep 2024 – Mar 2025, cooperative training): monitored logs and ran advanced searches in Elastic SIEM, managed SOC tickets, ran vulnerability assessments, was Auditing Champion for internal audits against NCA ECC and CCC, and secured Alibaba Cloud environments. She then completed the intensive, full-time <b>Kaspersky Academy × Tuwaiq Academy</b> Cybersecurity Solutions &amp; Analytics Bootcamp (Oct 2026), training in realistic SOC lab scenarios and passing its final technical assessment. Earlier: Tuwaiq <b>Cybercrime &amp; Network Forensics</b> Bootcamp (Jul 2025). <a href="#experience">See experience</a>',
+      ar: 'أخصائية أمن سيبراني متدربة في <b>زين السعودية</b> (سبتمبر 2024 – مارس 2025، تدريب تعاوني): راقبت السجلات وأجرت عمليات بحث متقدمة في Elastic SIEM، وأدارت تذاكر SOC، وأجرت تقييمات للثغرات، وكانت Auditing Champion في التدقيق الداخلي وفق ضوابط NCA ECC وCCC، وأمّنت بيئات Alibaba Cloud. ثم أكملت معسكر حلول وتحليلات الأمن السيبراني المكثّف بدوام كامل من <b>أكاديمية كاسبرسكي × أكاديمية طويق</b> (أكتوبر 2026)، وتدرّبت فيه على سيناريوهات واقعية لمختبرات SOC واجتازت تقييمه التقني النهائي. وقبل ذلك: معسكر <b>الجرائم السيبرانية والتحليل الجنائي للشبكات</b> من طويق (يوليو 2025). <a href="#experience">عرض الخبرات</a>',
     },
     {
       id: 'skills', chip: ['Skills', 'المهارات'],
@@ -44,14 +44,14 @@
     {
       id: 'labs', chip: ['Projects & labs', 'المشاريع والمختبرات'],
       keys: ['project', 'lab', 'labs', 'portfolio', 'banking app', 'android', 'portswigger', 'juice', 'idor', 'pentest', 'penetration', 'hack', 'مشروع', 'مشاريع', 'مختبر', 'اختراق', 'اندرويد', 'ثغر'],
-      en: 'Hands-on labs in authorised, intentionally vulnerable environments: an <b>Android banking app assessment</b> (found four issues), <b>PortSwigger Web Security Academy</b> (access control and authentication), <b>OWASP Juice Shop</b>, and <b>network attacks</b> with Nmap and Wireshark. She also builds: RASED and Bank Shield (in development). <a href="#work">See the work</a>',
-      ar: 'مختبرات تطبيقية في بيئات مصرّح بها ومعرّضة للثغرات عمدًا: <b>تقييم تطبيق بنكي على أندرويد</b> (اكتشفت أربع ثغرات)، و<b>PortSwigger Web Security Academy</b> (التحكم في الوصول والمصادقة)، و<b>OWASP Juice Shop</b>، و<b>الهجمات الشبكية</b> باستخدام Nmap وWireshark. وتبني أيضًا: راصد وBank Shield (قيد التطوير). <a href="#work">عرض الأعمال</a>',
+      en: 'Hands-on labs in authorised, intentionally vulnerable environments: an <b>Android banking app assessment</b> (found four issues), <b>PortSwigger Web Security Academy</b> (access control and authentication), <b>OWASP Juice Shop</b>, and <b>network attacks</b> with Nmap and Wireshark. She also builds: RASED and Bank Shield (in development), and has five academic projects. <a href="#labs">See the labs</a> · <a href="#academic">Academic projects</a>',
+      ar: 'مختبرات تطبيقية في بيئات مصرّح بها ومعرّضة للثغرات عمدًا: <b>تقييم تطبيق بنكي على أندرويد</b> (اكتشفت أربع ثغرات)، و<b>PortSwigger Web Security Academy</b> (التحكم في الوصول والمصادقة)، و<b>OWASP Juice Shop</b>، و<b>الهجمات الشبكية</b> باستخدام Nmap وWireshark. وتبني أيضًا: راصد وBank Shield (قيد التطوير)، ولديها خمسة مشاريع أكاديمية. <a href="#labs">عرض المختبرات</a> · <a href="#academic">المشاريع الأكاديمية</a>',
     },
     {
       id: 'certs', chip: ['Certifications', 'الشهادات'],
       keys: ['cert', 'security+', 'security plus', 'comptia', 'ejpt', 'tryhackme', 'course', 'bootcamp', 'kaspersky', 'training', 'شهاد', 'دوره', 'دورات', 'معسكر', 'كاسبرسكي', 'سكيورتي'],
-      en: '<b>CompTIA Security+</b> (Nov 2024). Bootcamps: Kaspersky × Tuwaiq Cybersecurity Solutions &amp; Analytics (Oct 2026) and Tuwaiq Cybercrime &amp; Network Forensics (Jul 2025). In progress: TryHackMe Jr Penetration Tester path, and preparing for eJPT. <a href="#credentials">See credentials</a>',
-      ar: '<b>CompTIA Security+</b> (نوفمبر 2024). المعسكرات: حلول وتحليلات الأمن السيبراني من كاسبرسكي × طويق (أكتوبر 2026)، والجرائم السيبرانية والتحليل الجنائي للشبكات من طويق (يوليو 2025). قيد التقدم: مسار TryHackMe Jr Penetration Tester، والاستعداد لشهادة eJPT. <a href="#credentials">عرض الشهادات</a>',
+      en: '<b>CompTIA Security+</b> (Nov 2024). Bootcamps: Kaspersky Academy × Tuwaiq Academy Cybersecurity Solutions &amp; Analytics (completed Oct 2026) and Tuwaiq Cybercrime &amp; Network Forensics (Jul 2025). In progress: TryHackMe Jr Penetration Tester path, and preparing for eJPT. <a href="#credentials">See credentials</a>',
+      ar: '<b>CompTIA Security+</b> (نوفمبر 2024). المعسكرات: حلول وتحليلات الأمن السيبراني من أكاديمية كاسبرسكي × أكاديمية طويق (اكتمل في أكتوبر 2026)، والجرائم السيبرانية والتحليل الجنائي للشبكات من طويق (يوليو 2025). قيد التقدم: مسار TryHackMe Jr Penetration Tester، والاستعداد لشهادة eJPT. <a href="#credentials">عرض الشهادات</a>',
     },
     {
       id: 'edu', chip: ['Education', 'التعليم'],
@@ -74,8 +74,8 @@
     {
       id: 'resume', chip: ['Resume', 'السيرة الذاتية'],
       keys: ['resume', 'cv', 'pdf', 'سيره', 'السيره', 'سي في'],
-      en: 'Here is her resume: <a href="Muneerah_Alahaideeb_Resume.pdf" target="_blank" rel="noopener">open the PDF ↗</a>',
-      ar: 'هذه سيرتها الذاتية: <a href="Muneerah_Alahaideeb_Resume.pdf" target="_blank" rel="noopener">افتح ملف PDF ↗</a>',
+      en: 'Here is her resume: <a href="Muneerah_Alahaideeb_Resume.pdf" target="_blank" rel="noopener">view it ↗</a> · <a href="Muneerah_Alahaideeb_Resume.pdf" download>download the PDF</a>',
+      ar: 'هذه سيرتها الذاتية: <a href="Muneerah_Alahaideeb_Resume.pdf" target="_blank" rel="noopener">عرضها ↗</a> · <a href="Muneerah_Alahaideeb_Resume.pdf" download>تحميل ملف PDF</a>',
     },
     {
       id: 'bank', chip: null,
@@ -121,8 +121,8 @@
   const FLAG = atob('TVVORUVSQUh7Y3VyaTBzMXR5XzFzX2FfczNjdXIxdHlfc2sxbGx9');
   const EGG = {
     win: [
-      `🚩 <b>Flag captured!</b><br><code class="flag">${FLAG}</code><br>You think like a hacker, and so do I. If you're hiring for a red or purple team, let's talk: <a href="mailto:AmuneerahA@gmail.com">AmuneerahA@gmail.com</a><br><br>🚩 <b>1/2 flags captured.</b> The second one belongs to someone more important than a customer. Go back to the <a href="#labTitle">IDOR demo</a> at the top, and read closely what the server tells you.`,
-      `🚩 <b>التقطت العلم!</b><br><code class="flag" dir="ltr">${FLAG}</code><br>تفكر مثل المخترقين، وأنا كذلك. إذا كنت تبحث عن عضو لفريق أحمر أو بنفسجي، لنتحدث: <a href="mailto:AmuneerahA@gmail.com">AmuneerahA@gmail.com</a><br><br>🚩 <b>التقطت 1 من 2.</b> العلم الثاني يخص شخصًا أهم من مجرد عميل. ارجع إلى <a href="#labTitle">عرض IDOR</a> في أعلى الصفحة، وانتبه جيدًا لما يقوله الخادم.`,
+      `🚩 <b>Flag captured!</b><br><code class="flag">${FLAG}</code><br>You think like a hacker, and so do I. If you're hiring for a red or purple team, let's talk: <a href="mailto:AmuneerahA@gmail.com">AmuneerahA@gmail.com</a><br><br>🚩 <b>1/2 flags captured.</b> The second one belongs to someone more important than a customer. Go back to the <a href="#labTitle">IDOR challenge</a> near the bottom of the page, and read closely what the server tells you.`,
+      `🚩 <b>التقطت العلم!</b><br><code class="flag" dir="ltr">${FLAG}</code><br>تفكر مثل المخترقين، وأنا كذلك. إذا كنت تبحث عن عضو لفريق أحمر أو بنفسجي، لنتحدث: <a href="mailto:AmuneerahA@gmail.com">AmuneerahA@gmail.com</a><br><br>🚩 <b>التقطت 1 من 2.</b> العلم الثاني يخص شخصًا أهم من مجرد عميل. ارجع إلى <a href="#labTitle">تحدي IDOR</a> في أسفل الصفحة، وانتبه جيدًا لما يقوله الخادم.`,
     ],
     hint1: [
       '💡 There are 2 hidden flags. For the first: open DevTools (press <b>F12</b>) and read the <b>Console</b>. Then look where developers leave notes: the page source (<b>Ctrl + U</b>).',
@@ -231,7 +231,7 @@
       return;
     }
     if (['hint', 'hints', 'help ctf', 'تلميح', 'هنت', 'مساعده'].includes(cmd)) {
-      reply(!flag1 ? EGG.hint1[L()] : `${window.nextHint ? window.nextHint() : ''} <a href="#labTitle">${L() ? 'اذهب إلى العرض ↑' : 'Go to the demo ↑'}</a>`);
+      reply(!flag1 ? EGG.hint1[L()] : `${window.nextHint ? window.nextHint() : ''} <a href="#labTitle">${L() ? 'اذهب إلى التحدي ↓' : 'Go to the challenge ↓'}</a>`);
       return;
     }
     if (cmd === 'flag' || cmd === 'cat flag' || cmd === 'cat flag.txt') { reply(EGG.denied[L()]); return; }

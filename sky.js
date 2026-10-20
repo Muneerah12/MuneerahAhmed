@@ -258,7 +258,7 @@
   // Click on empty background: a shooting star at night, sparkles by day.
   document.addEventListener('click', e => {
     if (reduceMQ.matches) return;
-    if (e.target.closest('a, button, input, textarea, select, summary, label, .lab, .project, .chat, .feature, .topbar, .nav')) return;
+    if (e.target.closest('a, button, input, textarea, select, summary, label, .lab, .project, .chat, .feature, .topbar, .nav, .wu, .page-head')) return;
     if (getSelection && String(getSelection()).length) return;
     const o = orb(), onOrb = Math.hypot(e.clientX - o.x, e.clientY - o.y) < o.r * 2.2;
     if (isDark()) {

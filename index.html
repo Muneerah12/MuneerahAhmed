@@ -27,7 +27,9 @@
     <div class="wrap topbar-inner">
       <a class="mark" href="#top" aria-label="Muneerah Alahaideeb, back to top">MA</a>
       <nav class="nav" id="nav" aria-label="Primary">
-        <a href="#work" data-i18n="nav.work">Work</a>
+        <a href="#rased" data-i18n="nav.rased">RASED</a>
+        <a href="#labs" data-i18n="nav.labs">Labs</a>
+        <a href="#academic" data-i18n="nav.acad">Academic</a>
         <a href="#experience" data-i18n="nav.exp">Experience</a>
         <a href="#skills" data-i18n="nav.skills">Skills</a>
         <a href="#credentials" data-i18n="nav.creds">Credentials</a>
@@ -58,38 +60,26 @@
           <ul class="hero-facts">
             <li data-i18n="hero.f1"><strong>CompTIA Security+</strong> certified</li>
             <li data-i18n="hero.f2"><strong>2nd place</strong>, Riyadh Expo 2030 Challenge</li>
-            <li data-i18n="hero.f3"><strong>Qualified</strong> for the Black Hat MEA CTF, December 2026</li>
+            <li data-i18n="hero.f3"><strong>Team leader</strong> of a CTF team qualified for Black Hat MEA 2026</li>
             <li data-i18n="hero.f4"><strong>Zain KSA</strong> SOC and vulnerability management internship</li>
           </ul>
           <div class="hero-cta">
             <a class="btn" href="#work" data-i18n="hero.cta1">See my work</a>
+            <a class="btn btn-ghost" href="Muneerah_Alahaideeb_Resume.pdf" target="_blank" rel="noopener" data-i18n="hero.cta3">View resume</a>
             <a class="btn btn-ghost" href="Muneerah_Alahaideeb_Resume.pdf" download data-i18n="hero.cta2">Download resume (PDF)</a>
           </div>
         </div>
 
-        <!-- Interactive request tamper demo -->
-        <figure class="lab" aria-labelledby="labTitle">
-          <div class="lab-head">
-            <span class="lab-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span id="labTitle" data-i18n="lab.title">Try it: an IDOR check, the way I test it</span>
-          </div>
-          <div class="lab-body">
-            <p class="lab-hint" id="labHint">This is an intercepted request for <em>your own</em> account. Change the account ID and send it.</p>
-<pre class="req" dir="ltr" aria-label="HTTP request"><span class="m">GET</span> /api/v1/accounts/<span class="idwrap"><button type="button" class="id-step" id="idDown" aria-label="Decrease account ID">−</button><input id="acctId" class="id-val" type="text" inputmode="numeric" maxlength="4" size="4" value="1043" aria-label="Account ID" spellcheck="false"><button type="button" class="id-step" id="idUp" aria-label="Increase account ID">+</button></span> HTTP/1.1
-Host: bank.example
-Cookie: session=<span class="tok">u1043·8f2c…</span>
-Accept: application/json</pre>
-            <div class="lab-controls">
-              <button class="btn btn-small" id="sendReq" type="button" data-i18n="lab.send">Send request</button>
-              <button class="link-btn" id="resetReq" type="button" data-i18n="lab.reset">Reset</button>
-              <button class="link-btn hint-btn" id="hintBtn" type="button" hidden data-i18n="lab.hint">💡 Hint</button>
-            </div>
-            <p class="lab-tip" id="labTip" hidden></p>
-            <pre class="res" id="response" dir="ltr" aria-live="polite"><span class="muted">Response will appear here.</span></pre>
-            <p class="lab-verdict" id="verdict" hidden></p>
-          </div>
-          <figcaption data-i18n="lab.caption">A simulated example. No real systems are contacted.</figcaption>
-        </figure>
+        <!-- RASED highlight -->
+        <a class="hero-award" href="#rased">
+          <span class="hero-award-top">
+            <span class="award-place" data-i18n="r.place">2<sup>nd</sup></span>
+            <span class="hero-award-k" data-i18n="r.award">Riyadh Expo 2030 Challenge<br>October 2026</span>
+          </span>
+          <strong class="hero-award-title" id="heroAwardTitle" data-i18n="r.title">RASED</strong>
+          <span class="hero-award-p" data-i18n="ha.p">AI crowd safety and intelligent response platform, built by a team of five. I built and secured its IoT/OT layer.</span>
+          <span class="hero-award-more" data-i18n="ha.more">Read about RASED ↓</span>
+        </a>
       </div>
     </section>
 
@@ -112,7 +102,7 @@ Accept: application/json</pre>
     </section>
 
     <!-- FEATURED: RASED -->
-    <section class="feature" aria-labelledby="rasedTitle">
+    <section class="feature" id="rased" aria-labelledby="rasedTitle">
       <div class="wrap feature-grid">
         <div class="award">
           <span class="award-place" data-i18n="r.place">2<sup>nd</sup></span>
@@ -195,15 +185,9 @@ Accept: application/json</pre>
           <p data-i18n="w.p">Hands-on work in authorised, intentionally vulnerable lab environments, plus projects I built. Each card is labelled for what it is.</p>
         </div>
 
-        <div class="filters" role="group" aria-label="Filter projects">
-          <button type="button" class="chip is-on" data-filter="all" aria-pressed="true" data-i18n="f.all">All</button>
-          <button type="button" class="chip" data-filter="offensive" aria-pressed="false" data-i18n="f.off">Penetration testing</button>
-          <button type="button" class="chip" data-filter="iot" aria-pressed="false">IoT / OT</button>
-          <button type="button" class="chip" data-filter="ai" aria-pressed="false" data-i18n="f.ai">AI &amp; fraud</button>
-          <button type="button" class="chip" data-filter="academic" aria-pressed="false" data-i18n="f.acad">Academic</button>
-        </div>
-
-        <div class="projects" id="projects">
+        <div class="work-group" id="labs">
+        <h3 class="group-title" data-i18n="g.labs">Penetration testing labs</h3>
+        <div class="projects">
           <article class="project" data-cat="offensive">
             <header>
               <span class="status s-lab" data-i18n="st.lab">Lab</span>
@@ -279,6 +263,22 @@ Accept: application/json</pre>
             </details>
             <ul class="tags"><li>Nmap</li><li>Wireshark</li><li>TCP/IP</li></ul>
           </article>
+        </div>
+        </div>
+
+        <div class="work-group" id="built">
+        <h3 class="group-title" data-i18n="g.built">Projects I built</h3>
+        <div class="projects">
+          <article class="project" data-cat="iot ai">
+            <header>
+              <span class="status s-award" data-i18n="st.award">2nd place</span>
+              <span class="year">2026</span>
+            </header>
+            <h3 data-i18n="r.title">RASED</h3>
+            <p data-i18n="rc.p">AI crowd safety and intelligent response platform: detects crowding, falls, weapons, gunshots and fire, alerts the right team and drafts the incident report. Team project, Riyadh Expo 2030 Challenge.</p>
+            <p class="card-links"><a class="more" href="#rasedTitle" data-i18n="rc.more">Read the full write-up</a> &nbsp;·&nbsp; <a class="more" href="https://reemalosaimii.github.io/Rased/" target="_blank" rel="noopener" data-i18n="rc.visit">Visit us ↗</a></p>
+            <ul class="tags"><li>AI detection</li><li>FastAPI</li><li>IoT security</li></ul>
+          </article>
 
           <article class="project" data-cat="ai">
             <header>
@@ -299,18 +299,12 @@ Accept: application/json</pre>
             <p data-i18n="hy.p">A secure wick hydroponic system with remote monitoring and control through Blynk.</p>
             <ul class="tags"><li>Arduino Uno</li><li>ESP8266</li><li>Blynk</li></ul>
           </article>
+        </div>
+        </div>
 
-          <article class="project" data-cat="iot ai">
-            <header>
-              <span class="status s-award" data-i18n="st.award">2nd place</span>
-              <span class="year">2026</span>
-            </header>
-            <h3 data-i18n="r.title">RASED</h3>
-            <p data-i18n="rc.p">AI crowd safety and intelligent response platform: detects crowding, falls, weapons, gunshots and fire, alerts the right team and drafts the incident report. Team project, Riyadh Expo 2030 Challenge.</p>
-            <p class="card-links"><a class="more" href="#rasedTitle" data-i18n="rc.more">Read the full write-up</a> &nbsp;·&nbsp; <a class="more" href="https://reemalosaimii.github.io/Rased/" target="_blank" rel="noopener" data-i18n="rc.visit">Visit us ↗</a></p>
-            <ul class="tags"><li>AI detection</li><li>FastAPI</li><li>IoT security</li></ul>
-          </article>
-
+        <div class="work-group" id="academic">
+        <h3 class="group-title" data-i18n="g.acad">Academic projects</h3>
+        <div class="projects">
           <article class="project" data-cat="academic">
             <header><span class="status s-acad" data-i18n="st.acad">Academic</span></header>
             <h3 data-i18n="ac1.h">Google Chrome security assessment</h3>
@@ -337,7 +331,7 @@ Accept: application/json</pre>
             <p data-i18n="ac5.p">Restructured a small organisation's marketing and demo processes with TOGAF, and automated a tech company's marketing emails with BPM.</p>
           </article>
         </div>
-        <p class="empty" id="emptyMsg" hidden data-i18n="w.empty">No projects in this category yet. Choose another filter.</p>
+        </div>
       </div>
     </section>
 
@@ -360,6 +354,31 @@ Accept: application/json</pre>
           </dl>
         </div>
 
+        <div class="job" id="bootcamp">
+          <div class="job-head">
+            <h3 data-i18n="e.kas">Cybersecurity Solutions &amp; Analytics Bootcamp, Kaspersky Academy × Tuwaiq Academy</h3>
+            <span class="year" data-i18n="e.kasy">Completed Oct 2026</span>
+          </div>
+          <p class="job-sub" data-i18n="e.kass">Riyadh. Intensive, full-time technical bootcamp.</p>
+          <dl class="duties">
+            <div data-i18n="e.k1"><dt>Selected</dt><dd>Selected for a bootcamp delivered by Kaspersky Academy, hosted at Tuwaiq Academy as the region’s first Kaspersky Academy.</dd></div>
+            <div data-i18n="e.k2"><dt>SOC lab training</dt><dd>Trained hands-on with enterprise security solutions and security analytics in realistic SOC lab scenarios: threat detection, event monitoring and correlation, alert triage, and incident investigation and response.</dd></div>
+            <div data-i18n="e.k3"><dt>Final assessment</dt><dd>Completed the program and passed its final technical assessment.</dd></div>
+          </dl>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <h3 data-i18n="e.tw">Cybercrime &amp; Network Forensics Bootcamp, Tuwaiq Academy</h3>
+            <span class="year" data-i18n="e.twy">Jul 2025</span>
+          </div>
+          <p class="job-sub" data-i18n="e.tws">Riyadh.</p>
+          <dl class="duties">
+            <div data-i18n="e.t1"><dt>Network forensics</dt><dd>Investigated network-based incidents through packet capture and traffic analysis, reconstructing attacker activity and timelines.</dd></div>
+            <div data-i18n="e.t2"><dt>Evidence and reporting</dt><dd>Handled digital evidence and reported forensic findings.</dd></div>
+          </dl>
+        </div>
+
         <div class="job" id="ctf">
           <div class="job-head">
             <h3 data-i18n="e.ctf">Capture the Flag competitions</h3>
@@ -367,7 +386,7 @@ Accept: application/json</pre>
           </div>
           <p class="job-sub" data-i18n="e.ctfs">Team competitions.</p>
           <dl class="duties">
-            <div data-i18n="e.c1"><dt>Black Hat MEA CTF</dt><dd>Played the qualifier on FlagYard; my team captured three flags and qualified to compete in the Black Hat MEA CTF in December 2026.</dd></div>
+            <div data-i18n="e.c1"><dt>Black Hat MEA CTF</dt><dd>Team leader of my CTF team. Together we played the qualifier on FlagYard, captured three flags and qualified to compete in the Black Hat MEA CTF in December 2026.</dd></div>
             <div data-i18n="e.c2"><dt>Tuwaiq Cyber Challenge</dt><dd>Competed in Tuwaiq Academy's cybersecurity CTF challenge.</dd></div>
           </dl>
         </div>
@@ -405,11 +424,6 @@ Accept: application/json</pre>
             <div class="row"><span><b>CompTIA Security+</b></span><span class="year" data-i18n="c.certy">Nov 2024</span></div>
           </div>
           <div class="cred-block">
-            <h3 data-i18n="c.boot">Bootcamps and training programs</h3>
-            <div class="row"><span data-i18n="c.b1"><b>Cybersecurity Solutions &amp; Analytics Bootcamp</b><br>Kaspersky × Tuwaiq Academy</span><span class="year" data-i18n="c.b1y">Oct 2026</span></div>
-            <div class="row"><span data-i18n="c.b2"><b>Cybercrime and Network Forensics</b><br>Tuwaiq Academy</span><span class="year" data-i18n="c.b2y">Jul 2025</span></div>
-          </div>
-          <div class="cred-block">
             <h3 data-i18n="c.learn">Learning paths and courses</h3>
             <div class="row"><span data-i18n="c.l1"><b>Jr Penetration Tester path</b>, TryHackMe (in progress)</span><span class="year">2026</span></div>
             <div class="row"><span data-i18n="c.l2"><b>AWS Cloud Practitioner Essentials</b> (course)</span><span class="year" data-i18n="c.l2y">Jun 2026</span></div>
@@ -430,6 +444,38 @@ Accept: application/json</pre>
             </details>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- CHALLENGE: interactive request tamper demo -->
+    <section class="section" id="challenge" aria-labelledby="challengeTitle">
+      <div class="wrap two-col">
+        <div>
+          <h2 id="challengeTitle" data-i18n="ch.title">Try a challenge</h2>
+          <p class="challenge-p" data-i18n="ch.p">A small hands-on puzzle for the curious: find the bug the way I would in a real test, then see how it gets fixed and retested.</p>
+        </div>
+        <figure class="lab" aria-labelledby="labTitle">
+          <div class="lab-head">
+            <span class="lab-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span id="labTitle" data-i18n="lab.title">Try it: an IDOR check, the way I test it</span>
+          </div>
+          <div class="lab-body">
+            <p class="lab-hint" id="labHint">This is an intercepted request for <em>your own</em> account. Change the account ID and send it.</p>
+<pre class="req" dir="ltr" aria-label="HTTP request"><span class="m">GET</span> /api/v1/accounts/<span class="idwrap"><button type="button" class="id-step" id="idDown" aria-label="Decrease account ID">−</button><input id="acctId" class="id-val" type="text" inputmode="numeric" maxlength="4" size="4" value="1043" aria-label="Account ID" spellcheck="false"><button type="button" class="id-step" id="idUp" aria-label="Increase account ID">+</button></span> HTTP/1.1
+Host: bank.example
+Cookie: session=<span class="tok">u1043·8f2c…</span>
+Accept: application/json</pre>
+            <div class="lab-controls">
+              <button class="btn btn-small" id="sendReq" type="button" data-i18n="lab.send">Send request</button>
+              <button class="link-btn" id="resetReq" type="button" data-i18n="lab.reset">Reset</button>
+              <button class="link-btn hint-btn" id="hintBtn" type="button" hidden data-i18n="lab.hint">💡 Hint</button>
+            </div>
+            <p class="lab-tip" id="labTip" hidden></p>
+            <pre class="res" id="response" dir="ltr" aria-live="polite"><span class="muted">Response will appear here.</span></pre>
+            <p class="lab-verdict" id="verdict" hidden></p>
+          </div>
+          <figcaption data-i18n="lab.caption">A simulated example. No real systems are contacted.</figcaption>
+        </figure>
       </div>
     </section>
 

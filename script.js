@@ -29,7 +29,7 @@
   const onScroll = () => topbar.classList.toggle('scrolled', scrollY > 8);
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
-  const links = new Map($$('a', nav).map(a => [a.getAttribute('href').slice(1), a]));
+  const links = new Map($$('a[href^="#"]', nav).map(a => [a.getAttribute('href').slice(1), a]));
   if ('IntersectionObserver' in window) {
     const spy = new IntersectionObserver(entries => {
       entries.forEach(en => {
@@ -54,10 +54,12 @@
       p.classList.remove('enter');
       if (match) { void p.offsetWidth; p.classList.add('enter'); shown++; }
     });
-    empty.hidden = shown > 0;
+    if (empty) empty.hidden = shown > 0;
   }));
 
-  /* ---------- IDOR demo ---------- */
+  /* ---------- IDOR demo (home page only) ---------- */
+  let resetDemo = () => {}, renderTip = () => {};
+  if ($('#acctId')) {
   const OWN = 1043;
   const people = {
     1041: ['Sara A.', '5,210.00'], 1042: ['Faisal K.', '18,940.50'], 1043: ['You', '2,375.25'],
@@ -85,7 +87,7 @@
   const hintBtn = $('#hintBtn'), tip = $('#labTip');
   let sends = 0, hintLevel = 0;
   const showHintBtn = () => { hintBtn.hidden = false; };
-  const renderTip = () => { if (hintLevel) { tip.textContent = t('hint' + hintLevel); tip.hidden = false; } };
+  renderTip = () => { if (hintLevel) { tip.textContent = t('hint' + hintLevel); tip.hidden = false; } };
   hintBtn.addEventListener('click', () => { hintLevel = Math.min(3, hintLevel + 1); renderTip(); });
   document.addEventListener('flag1', showHintBtn);
   window.nextHint = () => { hintLevel = Math.min(3, hintLevel + 1); showHintBtn(); renderTip(); return t('hint' + hintLevel); };
@@ -117,7 +119,7 @@
     verdict.textContent = v; verdict.hidden = false; verdict.classList.toggle('safe', safe);
     if (fixed && id !== OWN && id !== ADMIN) hint.textContent = t('labPatched');
   });
-  const resetDemo = () => {
+  resetDemo = () => {
     setId(OWN); fixed = false;
     res.innerHTML = `<span class="muted">${t('labWaiting')}</span>`;
     verdict.hidden = true;
@@ -125,10 +127,11 @@
   };
   $('#resetReq').addEventListener('click', resetDemo);
   resetDemo();
+  }
 
   /* ---------- Copy email ---------- */
-  const toast = $('#toast');
-  $('#copyEmail').addEventListener('click', async (e) => {
+  const toast = $('#toast'), copyBtn = $('#copyEmail');
+  if (copyBtn) copyBtn.addEventListener('click', async (e) => {
     const email = e.currentTarget.dataset.email;
     try { await navigator.clipboard.writeText(email); toast.textContent = t('copied') + email; }
     catch (err) { toast.textContent = t('copyBlocked') + email; }
